@@ -1,0 +1,62 @@
+name:                dataHaskell
+version:             0.1.0
+description:         Please see README.md
+synopsis:            The server for the TIL page
+homepage:            https://github.com/theam/dataHaskell
+license:             Apache-2.0
+license-file:        LICENSE
+author:              Theam
+maintainer:          hackers@theam.io
+copyright:           2018
+category:            Web
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable dataHaskell
+  main-is:             Main.hs
+  build-depends:       base >= 4.10
+                     , bytestring >= 0.10
+                     , cheapskate >= 0.1
+                     , cheapskate-lucid
+                     , github >= 0.18
+                     , heroku
+                     , lens
+                     , lucid >= 2.9
+                     , monad-logger >= 0.3
+                     , mtl >= 2.2
+                     , persistent
+                     , persistent-postgresql
+                     , persistent-template
+                     , resource-pool 
+                     , servant
+                     , servant-server
+                     , servant-lucid >= 0.7
+                     , text >= 1.2
+                     , vector >= 0.12
+                     , wai >= 3.2
+                     , warp >= 3.2
+                     , wreq
+
+
+  hs-source-dirs:      src
+  other-modules:       DataHaskell.App,
+                       DataHaskell.Prelude
+  default-language:    Haskell2010
+  default-extensions:  DeriveGeneric
+                     , TypeOperators
+                     , DataKinds
+                     , GADTs
+                     , TemplateHaskell
+                     , ExtendedDefaultRules
+                     , OverloadedStrings
+                     , GeneralizedNewtypeDeriving
+                     , StandaloneDeriving
+                     , TypeFamilies
+                     , NoImplicitPrelude
+                     , ScopedTypeVariables
+                     , MultiParamTypeClasses
+                     , QuasiQuotes
+                     , FlexibleContexts
+                     , LambdaCase
+  ghc-options:         -W
